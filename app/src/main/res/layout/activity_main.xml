@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="#7CC655"
         android:backgroundTint="#D3E6C778"
-        android:gravity="right|top|left"
+        android:gravity="center|right"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="36dp">
@@ -23,8 +23,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#E66565"
-            android:gravity="right|top"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="#000000"
+            android:outlineProvider="none">
 
             <TextView
                 android:id="@+id/timerTextView"
@@ -33,68 +35,136 @@
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
                 android:layout_weight="1"
-                android:text="1:23"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/quitButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20sp"
-                android:layout_marginRight="20sp"
-                android:layout_weight="1"
-                android:paddingStart="20sp"
-                android:paddingEnd="20sp"
-                android:text="@string/quitButtonText"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/placeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20sp"
-                android:layout_marginRight="20sp"
-                android:layout_weight="1"
-                android:paddingStart="20sp"
-                android:paddingEnd="20sp"
+                android:text="TIMER: 1:23"
+                android:textAlignment="center"
+                android:textColor="#000000"
                 android:textSize="30sp"
-                tools:text="Place" />
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/surrenderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="surrender"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/endTurnButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="END TURN"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/undoTurnButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="UNDO TURN"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/undoMoveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="undo move"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/playerTurnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="TURN:"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/blueImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="center|left"
+                android:layout_weight="0"
+                android:outlineAmbientShadowColor="#000000"
+                android:paddingRight="10sp"
+                app:srcCompat="@drawable/test" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/mainScreenLayout"
-            android:layout_width="wrap_content"
+            android:id="@+id/board_captureLayout"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal|left|center_vertical"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20sp"
+            android:paddingTop="20sp"
+            android:paddingRight="20sp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/mainScreenLayout"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
 
-                <com.example.strategocs301.MySurfaceView
-                    android:id="@+id/mySurfaceView"
-                    android:layout_width="800dp"
-                    android:layout_height="800dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/rightLayout"
-                android:layout_width="300sp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20sp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3EEA7D"
-                android:gravity="right|top|left"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button102"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Captured/Pieces" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <com.example.strategocs301.MySurfaceView
+                        android:id="@+id/mySurfaceView"
+                        android:layout_width="800dp"
+                        android:layout_height="800dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rightLayout"
+                    android:layout_width="300sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20sp"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#3EEA7D"
+                    android:gravity="center|right|top|left"
+                    android:orientation="vertical"
+                    android:paddingBottom="20sp">
+
+                    <TextView
+                        android:id="@+id/capturePiecesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FF5D70"
+                        android:text="CAPTURED PIECES:"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
