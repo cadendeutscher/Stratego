@@ -39,6 +39,7 @@ public class MySurfaceView extends SurfaceView {
         Bitmap Marshall = BitmapFactory.decodeResource(getResources(),R.drawable.marsh);
         Bitmap BlueTile = BitmapFactory.decodeResource(getResources(),R.drawable.bluetile);
         //Draw board
+        /**
         for(float i = 240; i < 1440; i += 120){
             for(float j = 120; j < 1320; j+= 120 ){
 
@@ -115,6 +116,7 @@ public class MySurfaceView extends SurfaceView {
 
             }
         }
+        */
     }
 }
 
