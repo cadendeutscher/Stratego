@@ -11,7 +11,8 @@ import android.view.SurfaceView;
 public class MySurfaceView extends SurfaceView {
     //Number of characters of each type starting with flag ending with bomb and spy respectively
     //This will help randomly place pieces
-    private Integer[] playerArray = {1,1,1,2,3,4,4,4,5,8,6,1};
+    //I removed 3 bombs
+    private Integer[] playerArray = {1,1,1,2,3,2,2,2,2,8,3,1};
 
     public MySurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -50,16 +51,26 @@ public class MySurfaceView extends SurfaceView {
                     canvas.drawRect(i,j,i+118,j+118,red);
                 }
                 if(j < 600){
-                    canvas.drawBitmap(BlueTile,i+10,j+10,black);
+                    canvas.drawBitmap(BlueTile, 360 + 10, 360 + 10, black);
+
+                    if((j >= 360 && i != 240) ) {
+
+                    }
+                    else {
+                        canvas.drawBitmap(BlueTile, i + 10, j + 10, black);
+                    }
+
                 }
                 if(j > 720) {
-                    int nrandom = (int)(Math.random()*12);
+                    //int nrandom = (int)(Math.random()*12);
+                    int nrandom = 1;
                     int start = nrandom;
                     //Loop through the array to find a non zero number
                     while(playerArray[nrandom] <= 0) {
                         nrandom += 1;
-                        nrandom = nrandom % 11;
+                        nrandom = nrandom % 12;
                         if(nrandom == start) {
+                            nrandom = 12;
                             break;
                         }
                     }
@@ -70,13 +81,31 @@ public class MySurfaceView extends SurfaceView {
                    else if(nrandom >= 1 && nrandom <= 9) {
                        playerArray[nrandom] -= 1;
                        if(nrandom == 9){
-                           canvas.drawBitmap(Scout,i+10,j+10,black);
+                           //Place first scout
+                           if(j ==840){
+                               canvas.drawBitmap(Scout, i + 10, j - 480 + 10, black);
+                           }
+                           else {
+                               canvas.drawBitmap(Scout, i + 10, j + 10, black);
+                           }
                        }
                        else if(nrandom == 8){
-                           canvas.drawBitmap(Miner,i+10,j+10,black);
+                           //Put first miner in position
+                           if(j ==840){
+                               canvas.drawBitmap(Miner, i + 10, j - 480 + 10, black);
+                           }
+                           else {
+                               canvas.drawBitmap(Miner, i + 10, j + 10, black);
+                           }
                        }
                        else if(nrandom == 7){
-                           canvas.drawBitmap(Sergeant,i+10,j+10,black);
+                           //Put first sergeant in position
+                           if(j ==840){
+                               canvas.drawBitmap(Sergeant, i + 10, j - 480 + 10, black);
+                           }
+                           else {
+                               canvas.drawBitmap(Sergeant, i + 10, j + 10, black);
+                           }
 
                        }
                        else if(nrandom == 6){
@@ -99,14 +128,15 @@ public class MySurfaceView extends SurfaceView {
                            canvas.drawBitmap(General,i+10,j+10,black);
                        }
                        else{
-                           canvas.drawBitmap(Marshall,i+10,j+10,black);
+                           canvas.drawBitmap(Marshall,i+10,j-240+10,black);
                        }
+
                    }
                    else if(nrandom == 10) {
                        playerArray[nrandom] -= 1;
                        canvas.drawBitmap(Bomb,i+10,j+10,black);
                    }
-                   else {
+                   else if(nrandom == 11) {
                        playerArray[nrandom] -= 1;
                        canvas.drawBitmap(Spy,i+10,j+10,black);
                    }
