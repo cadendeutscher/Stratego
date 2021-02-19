@@ -111,7 +111,7 @@
                 android:layout_weight="0"
                 android:outlineAmbientShadowColor="#000000"
                 android:paddingRight="10sp"
-                app:srcCompat="@drawable/redsquare" />
+                app:srcCompat="@drawable/test" />
 
         </LinearLayout>
 
@@ -173,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="x1"
+                        android:text="x3"
                         android:textSize="36sp" />
 
                 </LinearLayout>
@@ -245,7 +245,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="x2"
+                        android:text="x0"
                         android:textSize="36sp" />
 
                 </LinearLayout>
@@ -315,7 +315,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="x4"
+                        android:text="x5"
                         android:textSize="36sp" />
 
                 </LinearLayout>
@@ -339,7 +339,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="x3"
+                        android:text="x2"
                         android:textSize="36sp" />
 
                 </LinearLayout>
