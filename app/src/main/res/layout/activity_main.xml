@@ -35,7 +35,7 @@
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
                 android:layout_weight="1"
-                android:text="TIMER: 1:23"
+                android:text="@string/timer_value"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="30sp"
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 android:paddingStart="20sp"
                 android:paddingEnd="20sp"
-                android:text="surrender"
+                android:text="@string/surrender_btn"
                 android:textSize="15sp" />
 
             <Button
@@ -62,7 +62,7 @@
                 android:layout_weight="1"
                 android:paddingStart="20sp"
                 android:paddingEnd="20sp"
-                android:text="END TURN"
+                android:text="@string/end_turn_btn"
                 android:textSize="15sp" />
 
             <Button
@@ -75,7 +75,7 @@
                 android:backgroundTint="#673AB7"
                 android:paddingStart="20sp"
                 android:paddingEnd="20sp"
-                android:text="UNDO TURN"
+                android:text="@string/undo_turn_btn"
                 android:textSize="15sp" />
 
             <Button
@@ -87,7 +87,7 @@
                 android:layout_weight="1"
                 android:paddingStart="20sp"
                 android:paddingEnd="20sp"
-                android:text="undo move"
+                android:text="@string/undo_move_btn"
                 android:textSize="15sp" />
 
             <TextView
@@ -97,8 +97,8 @@
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
                 android:layout_weight="1"
-                android:gravity="center|right"
-                android:text="TURN:"
+                android:gravity="center|end"
+                android:text="@string/player_turn_text"
                 android:textColor="#000000"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -162,13 +162,14 @@
                         android:layout_height="wrap_content"
                         android:background="#FFFFFF"
                         android:backgroundTint="#FF5D70"
-                        android:text="CAPTURED PIECES:"
+                        android:text="@string/captured_pieces_text"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
+                        android:id="@+id/capture1Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -183,17 +184,17 @@
                             app:srcCompat="@drawable/marsh" />
 
                         <TextView
-                            android:id="@+id/textView"
+                            android:id="@+id/marshallMultiplier"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="x1"
+                            android:text="@string/mult_one"
                             android:textSize="36sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/LinearLayout"
+                        android:id="@+id/captureTwoLayout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -208,16 +209,17 @@
                             app:srcCompat="@drawable/gen" />
 
                         <TextView
-                            android:id="@+id/textView2"
+                            android:id="@+id/generalMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x1"
+                            android:text="@string/mult_one"
                             android:textSize="36sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture3Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -232,16 +234,17 @@
                             app:srcCompat="@drawable/col" />
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/colonelMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x0"
+                            android:text="@string/mult_zero"
                             android:textSize="36sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture4Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -256,16 +259,17 @@
                             app:srcCompat="@drawable/maj" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/majorMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x2"
+                            android:text="@string/mult_two"
                             android:textSize="36sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture5Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -280,15 +284,16 @@
                             app:srcCompat="@drawable/capt" />
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/captainMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x2"
+                            android:text="@string/mult_two"
                             android:textSize="36sp" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture6Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -303,15 +308,16 @@
                             app:srcCompat="@drawable/lt" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/lieutenantMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x0"
+                            android:text="@string/mult_zero"
                             android:textSize="36sp" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture7Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -326,16 +332,17 @@
                             app:srcCompat="@drawable/serg" />
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/sergentMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x4"
+                            android:text="@string/mult_four"
                             android:textSize="36sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture8Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -350,16 +357,17 @@
                             app:srcCompat="@drawable/miner" />
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/minerMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x3"
+                            android:text="@string/mult_three"
                             android:textSize="36sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/capture9Layout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -374,15 +382,16 @@
                             app:srcCompat="@drawable/scout" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/scoutMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x3"
+                            android:text="@string/mult_three"
                             android:textSize="36sp" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/captureBLayout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -397,15 +406,16 @@
                             app:srcCompat="@drawable/bomb" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/bombMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x1"
+                            android:text="@string/mult_one"
                             android:textSize="36sp" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/captureFLayout"
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
                         android:orientation="horizontal">
@@ -420,11 +430,11 @@
                             app:srcCompat="@drawable/flag" />
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/flagMult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="x0"
+                            android:text="@string/mult_zero"
                             android:textSize="36sp" />
 
                     </LinearLayout>
