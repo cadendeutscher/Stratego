@@ -15,6 +15,7 @@
         android:backgroundTint="#D3E6C778"
         android:gravity="center|right"
         android:orientation="vertical"
+        android:paddingBottom="20sp"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="36dp">
 
@@ -142,7 +143,8 @@
                     <com.example.strategocs301.MySurfaceView
                         android:id="@+id/mySurfaceView"
                         android:layout_width="800dp"
-                        android:layout_height="800dp" />
+                        android:layout_height="800dp"
+                        android:layout_gravity="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -171,7 +173,7 @@
                     <LinearLayout
                         android:id="@+id/capture1Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -196,7 +198,7 @@
                     <LinearLayout
                         android:id="@+id/captureTwoLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -221,7 +223,7 @@
                     <LinearLayout
                         android:id="@+id/capture3Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -246,7 +248,7 @@
                     <LinearLayout
                         android:id="@+id/capture4Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -271,7 +273,7 @@
                     <LinearLayout
                         android:id="@+id/capture5Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -295,7 +297,7 @@
                     <LinearLayout
                         android:id="@+id/capture6Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -319,7 +321,7 @@
                     <LinearLayout
                         android:id="@+id/capture7Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -344,7 +346,7 @@
                     <LinearLayout
                         android:id="@+id/capture8Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -369,7 +371,7 @@
                     <LinearLayout
                         android:id="@+id/capture9Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -393,7 +395,7 @@
                     <LinearLayout
                         android:id="@+id/captureBLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -417,7 +419,7 @@
                     <LinearLayout
                         android:id="@+id/captureFLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
+                        android:layout_height="58sp"
                         android:orientation="horizontal">
 
                         <ImageButton
